@@ -1,4 +1,4 @@
-package com.challange.backend.runthebank.usecase.account;
+package com.challenge.backend.runthebank.usecase.account;
 
 import java.util.UUID;
 
