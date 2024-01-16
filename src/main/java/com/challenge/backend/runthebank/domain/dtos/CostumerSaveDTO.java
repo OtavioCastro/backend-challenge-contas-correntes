@@ -1,6 +1,6 @@
-package com.challange.backend.runthebank.domain.dtos;
+package com.challenge.backend.runthebank.domain.dtos;
 
-import com.challange.backend.runthebank.domain.enums.TipoPessoa;
+import com.challenge.backend.runthebank.domain.enums.TipoPessoa;
 
 public record CostumerSaveDTO(
         String name,

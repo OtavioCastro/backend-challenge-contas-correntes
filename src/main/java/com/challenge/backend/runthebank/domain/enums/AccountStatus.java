@@ -1,7 +1,7 @@
-package com.challange.backend.runthebank.domain.enums;
+package com.challenge.backend.runthebank.domain.enums;
 
 public enum AccountStatus {
-    ATIVE(true),
+    ACTIVE(true),
     DEACTIVE(false);
 
     private boolean active;
