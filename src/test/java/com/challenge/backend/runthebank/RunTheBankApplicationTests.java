@@ -1,4 +1,4 @@
-package com.challange.backend.runthebank;
+package com.challenge.backend.runthebank;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
