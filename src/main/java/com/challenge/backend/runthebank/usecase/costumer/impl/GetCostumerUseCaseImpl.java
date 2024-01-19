@@ -16,8 +16,7 @@ public class GetCostumerUseCaseImpl implements GetCostumerUseCase {
     private final CostumerGateway costumerGateway;
 
 
-    public GetCostumerUseCaseImpl(CostumerGateway costumerGateway,
-                                  CostumerToCostumerResponseDTOConverter toCostumerResponseDTOConverter) {
+    public GetCostumerUseCaseImpl(CostumerGateway costumerGateway) {
         this.costumerGateway = costumerGateway;
     }
 
