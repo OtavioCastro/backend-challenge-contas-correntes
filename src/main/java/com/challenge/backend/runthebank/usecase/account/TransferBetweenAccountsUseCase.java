@@ -1,7 +1,7 @@
 package com.challenge.backend.runthebank.usecase.account;
 
-import java.math.BigDecimal;
+import com.challenge.backend.runthebank.domain.dtos.TransferBetweenAccountsResponseDTO;
 
 public interface TransferBetweenAccountsUseCase {
-    void execute(Long agencyDebit, Long agencyCredit, Double valueTransfer);
+    TransferBetweenAccountsResponseDTO execute(Long agencyDebit, Long agencyCredit, Double valueTransfer);
 }
