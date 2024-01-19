@@ -26,11 +26,13 @@ public class CostumerEntity {
     public CostumerEntity() {
     }
 
-    public CostumerEntity(String document, String name, String address, String password, List<AccountEntity> accounts) {
+    public CostumerEntity(UUID costumerId, String document, String name, String address, String password, TipoPessoa tipoPessoa, List<AccountEntity> accounts) {
+        this.costumerId = costumerId;
         this.document = document;
         this.name = name;
         this.address = address;
         this.password = password;
+        this.tipoPessoa = tipoPessoa;
         this.accounts = accounts;
     }
 

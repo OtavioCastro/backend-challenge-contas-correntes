@@ -20,7 +20,7 @@ public class AccountEntity {
     public AccountEntity() {
     }
 
-    public AccountEntity(UUID accountId, Long agency, Double balance, AccountStatus accountStatus, CostumerEntity costumer) {
+    public AccountEntity(UUID accountId, Long agency, Double balance, AccountStatus accountStatus) {
         this.accountId = accountId;
         this.agency = agency;
         this.balance = balance;
