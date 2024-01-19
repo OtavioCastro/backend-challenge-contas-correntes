@@ -7,15 +7,11 @@ import com.challenge.backend.runthebank.repository.CostumerRepository;
 import com.challenge.backend.runthebank.repository.converter.CostumerEntityToCostumerConverter;
 import com.challenge.backend.runthebank.repository.converter.CostumerToCostumerEntityConverter;
 import com.challenge.backend.runthebank.repository.entity.CostumerEntity;
-import org.springframework.http.HttpStatus;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.Optional;
 import java.util.UUID;
-
-import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
 
 @Service
 public class CostumerGatewayImpl implements CostumerGateway {
@@ -48,9 +44,12 @@ public class CostumerGatewayImpl implements CostumerGateway {
     @Override
     public void updateCostumer(CostumerUpdateDTO costumerUpdateDTO) {
         CostumerEntity costumerEntity = costumerRepository.findByDocument(costumerUpdateDTO.document());
-        costumerEntity.setName(costumerUpdateDTO.name());
-        costumerEntity.setAddress(costumerUpdateDTO.address());
-        costumerEntity.setPassword(costumerUpdateDTO.password());
+
+        if(StringUtils.isNotEmpty(costumerUpdateDTO.name())) costumerEntity.setName(costumerUpdateDTO.name());
+        if(StringUtils.isNotEmpty(costumerUpdateDTO.address())) costumerEntity.setAddress(costumerUpdateDTO.address());
+        if(StringUtils.isNotEmpty(costumerUpdateDTO.password())) costumerEntity.setPassword(costumerUpdateDTO.password());
+
+        costumerRepository.save(costumerEntity);
     }
 
     @Override
